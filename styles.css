@@ -3,8 +3,444 @@ I specifically targeted various items just to make it
 easier to verify template/example was followed precicesly*/
 
 html {
-    background-color: #000000;
+    background-color: #020659;
     color: #FFFFFF;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+/* START - This code specifies order of sections and styles sections */
+body {
+    font-family: Optima, sans-serif;
+    background-color: #030A8C;
+    margin: 0 auto;
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+}
+
+#navbar {
+    width: 375px;
+    height: 57px;
+    order: 1;
+    background-color: #030A8C;
+    z-index: 1;
+}
+
+#smooth {
+    width: 355px;
+    height: 160px;
+    order: 2;
+    background-image: linear-gradient(to right, #2104D9, #000000);
+    padding: 10px;
+}
+
+#trending {
+    width: 375px;
+    height: 480px;
+    order: 3;
+    background-color: #FFFFFF;
+}
+
+#playlists {
+    width: 375px;
+    height: 480px;
+    order: 4;
+    background-color: #0D8DFB;
+}
+
+#curated {
+    width: 375px;
+    height: 480px;
+    order: 5;
+    background-color: #020873;
+}
+
+.playlistcontainer {
+    padding: 10px;
+    width: 160px;
+    height: 245px;
+    background-color: #2699FB;
+    text-align: center;
+}
+
+.curatedcontainer {
+    padding: 10px;
+    width: 160px;
+    height: 245px;
+    background-color: #020659;
+    text-align: center;
+}
+
+#trending h2{
+    padding-left: 35px;  
+}
+
+#playlists h2, #curated h2{
+    background-color: white;
+    padding: 20px;
+    padding-top: 30px;
+    margin-top: 0px;
+    padding-left: 35px;
+}
+
+
+.buttonbackground{
+    background: white;
+    width: 375px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+footer {
+    width: 375px;
+    order: 6;
+    padding-top: 10px;
+    text-align: center;
+}
+
+/* START - Formats scroll class */
+.scroll {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.scroll section {
+    margin: 10px;
+    position: relative;
+}
+
+.scroll div {
+    position: absolute;
+    top: 251px;
+    background-color: rgba(255, 255, 255, .75);
+    padding: 5px;
+    height: 50px;
+    width: 350px;
+}
+
+h3{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+dl {
+    display: flex;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+dt {
+    margin-top: 0px;
+}
+
+dd{
+    margin-left: 5px;
+    margin-right: 0px;
+}
+
+audio {
+    position: absolute;
+    bottom: 150px;
+    left: 5px;
+}
+
+.more {
+    text-decoration: none;
+    background-color: #590242;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 10px;
+    width: 150px;
+    display: block;
+    text-align: center;
+    margin: 10px 0 30px 32px;
+}
+
+.more:hover {
+    background-color: #020659;
+}
+
+audio::-webkit-media-controls-mute-button {
+    background-color: #FFFFFF;
+    border-radius: 50%;
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: #FFFFFF;
+    border-radius: 50%;
+}
+
+audio::-webkit-media-controls-enclosure {
+    background-color: rgba(2555, 255, 255, .5);
+}
+
+#trending ::-webkit-scrollbar {
+    width: 15px;
+
+}
+
+#trending ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #590242;
+
+}
+
+#trending ::-webkit-scrollbar-thumb {
+    background-color: #590242;
+    border-radius: 5px;
+}
+
+#trending ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+
+#playlists ::-webkit-scrollbar,
+#curated ::-webkit-scrollbar {
+    width: 15px;
+}
+
+#playlists ::-webkit-scrollbar-track,
+#curated ::-webkit-scrollbar-track {
+    box-shadow: insert 0 0 15px #020659;
+}
+
+#playlists ::-webkit-scrollbar-thumb,
+#curated ::-webkit-scrollbar-thumb {
+    background-color: #020659;
+    border-radius: 5px;
+}
+
+#playlists ::-webkit-scrollbar-thumb:hover,
+#curated ::-webkit-scrollbar-thumb:hover {
+    background-color: #FFFFFF;
+}
+
+/* END - Formats scroll class */
+
+
+
+/* END - This code specifies order of sections */
+
+h1,
+h2,
+h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h2,
+h3 {
     font-size: 20px;
+    color: #590242;
+    line-height: 2em;
+}
+
+/* START - character styles as described in assets.adobe page */
+
+h1 {
+    font-family: raleway, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 2em;
+    color: #FFFFFF;
+}
+
+dt {
+    font-family: raleway, sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    color: #590242;
+}
+
+#playlists h3,
+#curated h3 {
+    font-family: raleway, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+header p {
+    font-family: raleway, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+#playlists p,
+#curated h3 {
+    font-family: raleway, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+footer {
+    font-family: raleway, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #590242;
+}
+
+dd {
+    font-family: raleway, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #590242;
+}
+
+.more {
+    font-family: raleway, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+#trending h3 {
+    font-family: raleway, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #590242;
+}
+
+h2 {
+    font-family: raleway, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #590242;
+}
+
+/* END - character styles as described in assets.adobe page */
+
+/* START - Included Menu Code for Mobile First Style (minus the bits you know how to do): */
+ul {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+
+label span:before,
+label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+label span:before {
+    top: 5px;
+}
+
+label span:after {
+    top: -5px;
+}
+
+input {
+    display: none;
+}
+
+input:checked~ul {
+    max-height: 500px;
+}
+
+input:checked~label span {
+    background: transparent;
+}
+
+input:checked~label span:before {
+    transform: rotate(-45deg);
+}
+
+input:checked~label span:after {
+    transform: rotate(45deg);
+}
+
+input:checked~label:not(.steps) span:before,
+input:checked~label:not(.steps) span:after {
+    top: 0;
+}
+
+/* END - Included Menu Code for Mobile First Style (minus the bits you know how to do): */
+
+nav {
+    position: fixed;
+    top: 0;
+    font-family: raleway, sans-serif;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li:first-child {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: #030A8C;
+    display: block;
+    text-align: center;
+    color: #E3F2FD;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 150px;
+    padding: 2px;
+}
+
+ul {
+    position: absolute;
+    top: 0;
+    margin-left: 50px;
+    z-index: 1;
+}
+
+nav a:hover {
+    background-color: #1E88E5;
+    color: #444444;
+}
+
+
+
+
+@media screen and (min-width:834px) {
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    label span,
+    input {
+        display: none;
+    }
+
 }

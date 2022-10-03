@@ -5,123 +5,201 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/avt5eih.css">
     <title>MuzakMaker</title>
 </head>
 
 <body>
     <header>
-        <section>
+        <div id="smooth">
             <h1>Smooth Jazz</h1>
             <p>This station is dedicated to the soothing sounds of smooth jazz. This genre of commercially oriented
                 crossover jazz became dominant in the 1980s and early 1990s.</p>
-        </section>
-        <nav>
+        </div>
+        <nav id=navbar>
+            <input type="checkbox" id="dropdown" />
+            <label for="dropdown"><span></span></label>
             <ul>
-                <li>MuzakMaker</li>
-                <li><a href="#trendingheader">Trending Songs</a></li>
-                <li><a href="#yourheader">Your playlists</a></li>
-                <li><a href="#curatedheader">Curated Playlists</a></li>
-                <li>duke-silver.png</li>
+                <li><a href="#home">MuzakMaker</a></li>
+                <li><a href="#trending">Trending Songs</a></li>
+                <li><a href="#playlists">Your playlists</a></li>
+                <li><a href="#curated">Curated Playlists</a></li>
+                <li><a href="#"> <img src="https://github.com/georgeschultz1998/streamingmedia/blob/main/images/duke-silver.png?raw=true">  </a></li>
             </ul>
         </nav>
     </header>
-    <section>
-        <h2 id = "trendingheader">Trending Songs</h2>
-        <section>
-            <h3>Aloma</h3>
-            Artist Cali
-            aloma-cover.png
-            aloma.mp3
-        </section>
+    <section id="trending">
+        <h2>Trending Songs</h2>
+        <div class="scroll">
+            <section class="songcontainer">
+                <div>
+                    <h3>Aloma</h3>
+                    <dl>
+                        <dt>Artist </dt>
+                        <dd>Cali</dd>
+                    </dl>
+                </div>
+                <img src="https://github.com/georgeschultz1998/streamingmedia/blob/main/images/aloma-cover.png?raw=true"
+                    alt="white dove on black background">
+                <audio controls src="https://github.com/georgeschultz1998/streamingmedia/raw/main/audio/aloma.mp3">
+                    Your browser does not support the <code>audio</code> element.
+                </audio>
+            </section>
 
-        <section>
-            <h3>My Road</h3>
-            Artist Nesterouk
-            my-road-cover.png
-            my-road.mp3
-        </section>
 
-        <section>
-            <h3>Papaya</h3>
-            Artist Dredstudio
-            papaya-cover.png
-            papaya.mp3
-        </section>
+            <section class="songcontainer">
+                <div>
+                    <h3>My Road</h3>
+                    <dl>
+                        <dt>Artist </dt>
+                        <dd>Nesterouk</dd>
+                    </dl>
+                </div>
+                <img src="https://github.com/georgeschultz1998/streamingmedia/blob/main/images/my-road-cover.png?raw=true"
+                    alt="temp">
+                <audio controls src="https://github.com/georgeschultz1998/streamingmedia/raw/main/audio/my-road.mp3">
+                    Your browser does not support the <code>audio</code> element.
+                </audio>
+            </section>
 
-        <section>
-            <h3>Smoothies</h3>
-            Artist Black Rhomb
-            smoothies-cover.png
-            smoothies.mp3
-        </section>
 
-        <section>
-            <h3>Successful Performance</h3>
-            Artist Ricky Bombino
-            successful-performance-cover.png
-            successful-performance.mp3
-        </section>
-        More trending
+            <section class="songcontainer">
+                <div>
+                    <h3>Papaya</h3>
+                    <dl>
+                        <dt>Artist </dt>
+                        <dd>Dredstudio</dd>
+                    </dl>
+                </div>
+                <img src="https://github.com/georgeschultz1998/streamingmedia/blob/main/images/papaya-cover.png?raw=true"
+                    alt="temp">
+                <audio controls src="https://github.com/georgeschultz1998/streamingmedia/raw/main/audio/papaya.mp3">
+                    Your browser does not support the <code>audio</code> element.
+                </audio>
+            </section>
+
+
+            <section class="songcontainer">
+                <div>
+                    <h3>Smoothies</h3>
+                    <dl>
+                        <dt>Artist </dt>
+                        <dd>Black Rhomb</dd>
+                    </dl>
+                </div>
+                <img src="https://github.com/georgeschultz1998/streamingmedia/blob/main/images/smoothies-cover.png?raw=true"
+                    alt="temp">
+                <audio controls src="https://github.com/georgeschultz1998/streamingmedia/raw/main/audio/smoothies.mp3">
+                    Your browser does not support the <code>audio</code> element.
+                </audio>
+            </section>
+
+
+            <section class="songcontainer">
+                <div>
+                    <h3>Successful Performance</h3>
+                    <dl>
+                        <dt>Artist </dt>
+                        <dd>Ricky Bombino</dd>
+                    </dl>
+                </div>
+                <img src="https://github.com/georgeschultz1998/streamingmedia/blob/main/images/successful-performance-cover.png?raw=true"
+                    alt="temp">
+                <audio controls src="https://github.com/georgeschultz1998/streamingmedia/raw/main/audio/successful-performance.mp3">
+                    Your browser does not support the <code>audio</code> element.
+                </audio>
+            </section>
+
+        </div>
+
+        <input class="more" type="button" value="More trending" />
+
     </section>
 
-    <section>
-        <h2 id = "yourheader">Your Playlists</h2>
-        <section>
-            best-of-2020-cover.png
-            <h3>Best of 2020</h3>
-            The music that got you through the lock down.
-        </section>
-        <section>
-            pumpkin-spice-cover.png
-            <h3>Pumpkin Spice</h3>
-            Creamy and spicy, just like your favorite autumnal latte.
-        </section>
-        <section>
-            quite-storm-cover.png
-            <h3>Quiet Storm</h3>
-            Slow tempos and relaxed rhythms.
-        </section>
-        <section>
-            smooth-jazz-cover.png
-            <h3>Smooth Jazz</h3>
-            The pioneers of smooth jazz
-        </section>
-        <section>
-            smooth-study-cover.png
-            <h3>Smooth Study</h3>
-            Background music to keep you going while you study.
-        </section>
-        All your playlists
+    <section id="playlists">
+        <h2 id="yourheader">Your Playlists</h2>
+
+        <div class="scroll">
+
+            <section class="playlistcontainer">
+                <img src="https://github.com/georgeschultz1998/streamingmedia/blob/main/images/best-of-2020-cover.png?raw=true"
+                    alt="temp">
+                <h3>Best of 2020</h3>
+                <p>The music that got you through the lock down.</p>
+            </section>
+
+            <section class="playlistcontainer">
+                <img src="https://github.com/georgeschultz1998/streamingmedia/blob/main/images/pumpkin-spice-cover.png?raw=true"
+                    alt="temp">
+                <h3>Pumpkin Spice</h3>
+                <p>Creamy and spicy, just like your favorite autumnal latte.</p>
+            </section>
+            <section class="playlistcontainer">
+                <img src="https://github.com/georgeschultz1998/streamingmedia/blob/main/images/quiet-storm-cover.png?raw=true"
+                    alt="temp">
+                <h3>Quiet Storm</h3>
+                <p>Slow tempos and relaxed rhythms.</p>
+            </section>
+            <section class="playlistcontainer">
+                <img src="https://github.com/georgeschultz1998/streamingmedia/blob/main/images/smooth-jazz-cover.png?raw=true"
+                    alt="temp">
+                <h3>Smooth Jazz</h3>
+                <p>The pioneers of smooth jazz</p>
+            </section>
+            <section class="playlistcontainer">
+                <img src="https://github.com/georgeschultz1998/streamingmedia/blob/main/images/smooth-study-cover.png?raw=true"
+                    alt="temp">
+                <h3>Smooth Study</h3>
+                <p>Background music to keep you going while you study.</p>
+            </section>
+        </div>
+
+        <div class = buttonbackground><input class="more" type="button" value="All your playlists" /></div>
+
     </section>
 
-    <section>
-        <h2 id = "curatedheader">Curated Playlists</h2>
-        <section>
-            Boozey-brunch-cover.png
-            <h3>Boozey Brunch</h3>
-            Light up the afternoon with these energetic hits.
-        </section>
-        <section>
-            dinner-party-cover.png
-            <h3>Dinner Party</h3>
-            Background music to give your party life, but allow your guests to chat.
-        </section>
-        <section>
-            mellow-cover.png
-            <h3>Mellow</h3>
-            Relax after a stressful day with this collection of extra smooth jazz.
-        </section>
-        <section>
-            jazz-and-chill-cover.png
-            <h3>Jazz and Chill</h3>
-            Set the mood with these silky sounds.
-        </section>
-        <section>
-            smooth-saxophone-cover.png
-            <h3>Jazz Saxophone</h3>
-            The greatest collection of your sax favorites.
-        </section> 
-        More curated
+    <section id="curated">
+        <h2 id="curatedheader">Curated Playlists</h2>
+        <div class="scroll">
+            <section class="curatedcontainer">
+                <img src="https://github.com/georgeschultz1998/streamingmedia/blob/main/images/boozy-brunch-cover.png?raw=true"
+                    alt="temp">
+                <h3>Boozey Brunch</h3>
+                <p>Light up the afternoon with these energetic hits.</p>
+            </section>
+
+            <section class="curatedcontainer">
+                <img src="https://github.com/georgeschultz1998/streamingmedia/blob/main/images/dinner-party-cover.png?raw=true"
+                    alt="temp">
+                <h3>Dinner Party</h3>
+                <p>Background music to give your party life, but allow your guests to chat.</p>
+            </section>
+
+            <section class="curatedcontainer">
+                <img src="https://github.com/georgeschultz1998/streamingmedia/blob/main/images/mellow-cover.png?raw=true"
+                    alt="temp">
+                <h3>Mellow</h3>
+                <p>Relax after a stressful day with this collection of extra smooth jazz.</p>
+            </section>
+
+            <section class="curatedcontainer">
+                <img src="https://github.com/georgeschultz1998/streamingmedia/blob/main/images/jazz-chill-cover.png?raw=true"
+                    alt="temp">
+                <h3>Jazz and Chill</h3>
+                <p>Set the mood with these silky sounds.</p>
+            </section>
+
+            <section class="curatedcontainer">
+                <img src="https://github.com/georgeschultz1998/streamingmedia/blob/main/images/smooth-saxophone-cover.png?raw=true"
+                    alt="temp">
+                <h3>Jazz Saxophone</h3>
+                <p>The greatest collection of your sax favorites.</p>
+            </section>
+        </div>
+
+        <div class = buttonbackground ><input class="more" type="button" value="More curated" /></div>
+
     </section>
 
     <footer>Copyright 2022 Smooth Jazz</footer>
