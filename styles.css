@@ -5,8 +5,11 @@ easier to verify template/example was followed precicesly*/
 html {
     background-color: #020659;
     color: #FFFFFF;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: raleway, sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 12px;
+
 }
 
 /* START - This code specifies order of sections and styles sections */
@@ -81,7 +84,11 @@ body {
     text-align: center;
 }
 
-#trending h2{
+.playlistcontainer:hover, .curatedcontainer:hover {
+    background-color: #590242;
+}
+
+#trending h2 {
     padding-top: 25px;
     padding-left: 35px;
     padding-bottom: 0;
@@ -204,7 +211,6 @@ audio::-webkit-media-controls-enclosure {
 
 #trending ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 15px #590242;
-
 }
 
 #trending ::-webkit-scrollbar-thumb {
@@ -223,7 +229,7 @@ audio::-webkit-media-controls-enclosure {
 
 #playlists ::-webkit-scrollbar-track,
 #curated ::-webkit-scrollbar-track {
-    box-shadow: insert 0 0 15px #020659;
+    box-shadow: inset 0 0 15px #020659;
 }
 
 #playlists ::-webkit-scrollbar-thumb,
@@ -432,13 +438,13 @@ nav a {
 ul {
     position: absolute;
     top: 0;
-    margin-left:50px;
+    margin-left: 50px;
     z-index: 1;
 }
 
 nav a:hover {
-    background-color: #1E88E5;
-    color: #444444;
+    background-color: #590242;
+    color: #FFFFFF;
 }
 
 
@@ -457,22 +463,22 @@ nav a:hover {
         padding-right: 0;
     }
 
-    body{
+    body {
         display: grid;
         grid-template-columns: 417px 417px;
-        grid-template-areas: 
-        "nav nav"
-        "smootharea smootharea"
-        "trending trending"
-        "play curated"
-        "footer footer"
-         ;
+        grid-template-areas:
+            "nav nav"
+            "smootharea smootharea"
+            "trending trending"
+            "play curated"
+            "footer footer"
+        ;
     }
 
-    #navbar {
+    nav{
         grid-area: nav;
-        padding-left: 0;
-        margin-left: 0;
+        padding:0;
+        margin: 0;
         position: fixed;
         top: 0;
     }
@@ -485,25 +491,67 @@ nav a:hover {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
 
-    #smooth{
+    #smooth {
+        height: 100px;
         grid-area: smootharea;
     }
+    #smooth h1 {
+        margin: 0;
+        padding: 0;
+        padding-top: 10px;
+        padding-left: 35px;
+    }
+    #smooth p {
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 20px;
+        padding-left: 35px;
+        padding-right: 10px;
 
-    #trending{
+    }
+
+    #trending {
         grid-area: trending;
         height: 480px;
     }
 
-    #playlists{
+    #trending .more{
+        margin-left: 650px;
+    }
+
+    #playlists {
         width: 417px;
         height: 600px;
         grid-area: play;
+        display: grid;
+        grid-template-areas:
+            "h2"
+            "container"
+            "buttonbackground";
     }
 
-    #curated{
+    #curated {
         width: 417px;
         height: 600px;
         grid-area: curated;
+        display: grid;
+        grid-template-areas:
+            "h2"
+            "container"
+            "buttonbackground";
+    }
+
+    h2 {
+        grid-area: h2;
+    }
+
+    .buttonbackground {
+        grid-area: buttonbackground;
+        width: 200px;
+        padding-left: 217px;
+        margin-top: 10px;
+        padding-bottom: 10px;
     }
 
     #playlists h2,
@@ -514,13 +562,8 @@ nav a:hover {
         margin-top: 0px;
     }
 
-    .buttonbackground{
-        width: 417px;
-        margin-top: 20px;
-    }
-
     .verticalscroll {
-        height: 500px;
+        height: 460px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -528,13 +571,24 @@ nav a:hover {
         overflow-x: hidden;
         overflow-y: auto;
     }
-    
-    footer{
-        grid-area: footer;
-        margin-top: 80px;
+
+    .verticalscroll section:first-child {
+        margin-top: 270px;
     }
 
-   .playlistcontainer, .curatedcontainer {
+    .verticalscroll section {
+        margin-top: 10px;
+        position: relative;
+    }
+
+    footer {
+        grid-area: footer;
+        padding-top: 50px;
+        padding-bottom: 15px;
+    }
+
+    .playlistcontainer,
+    .curatedcontainer {
         width: 360px;
         height: 140px;
         padding: 10px;
@@ -542,27 +596,29 @@ nav a:hover {
         flex: 1;
         grid-area: container;
         display: grid;
-        grid-template-areas: 
-        "img h3 ."
-        "img p ."
+        grid-template-areas:
+            "img h3 ."
+            "img p ."
         ;
     }
 
-        
-    .playlistcontainer img, .curatedcontainer img {
-        width: 180px;
+    .playlistcontainer img,
+    .curatedcontainer img {
+        width: 130px;
         grid-area: img;
         padding: 0;
         margin: 0;
     }
 
-    .playlistcontainer h3, .curatedcontainer h3 {
+    .playlistcontainer h3,
+    .curatedcontainer h3 {
         grid-area: h3;
         padding: 0;
         margin: 0;
     }
 
-    .playlistcontainer p, .curatedcontainer p{
+    .playlistcontainer p,
+    .curatedcontainer p {
         grid-area: p;
         padding: 0;
         margin: 0;
