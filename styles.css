@@ -51,18 +51,17 @@ nav a {
     color: #E3F2FD;
     text-transform: uppercase;
     font-weight: bold;
-    width: 200px;
     padding: 20px;
-    margin-left: 25px;
-
+    width: 275px;
+    padding-left: 0px;
+    padding-top: 16px;
+    padding-right: 60px;
 }
 
 nav a:hover {
     background-color: #590242;
     color: #FFFFFF;
 }
-
-
 
 #muzakli {
     position: fixed;
@@ -79,6 +78,7 @@ nav a:hover {
     width: 200px;
     padding: 20px;
     padding-bottom: 9px;
+    padding-right: 90px;
     margin-bottom: 0px;
     font-variant: small-caps;
     margin-left: 25px;
@@ -104,7 +104,7 @@ ul {
 }
 
 #smooth h1 {
-    padding-left: 35px;
+    padding-left: 45px;
     padding-bottom: 0px;
     margin-bottom: 0px;
     font-size: 23.5px;
@@ -112,7 +112,7 @@ ul {
 
 #smooth p {
     padding-top: 0px;
-    padding-left: 35px;
+    padding-left: 45px;
     padding-right: 10px;
     margin-top: 0px;
     font-size: 16px;
@@ -131,7 +131,7 @@ ul {
 #trending h2 {
     font-size: 20px;
     padding-top: 35px;
-    padding-left: 35px;
+    padding-left: 45px;
     padding-bottom: 0;
     margin-top: 0;
     margin-bottom: 0;
@@ -171,7 +171,7 @@ ul {
 #curated h2 {
     padding: 0;
     margin: 0;
-    padding-left: 35px;
+    padding-left: 45px;
 }
 
 #playlists h2,
@@ -558,22 +558,19 @@ input:checked~label:not(.steps) span:after {
         grid-area: nava;
         padding: 0;
         margin: 0;
-        font-size: 10px;
+        font-size: 16px;
         background-color: #030A8C;
         position: fixed;
         top: 0;
-        padding-left: 0px;
-        padding-right: 0px;
-        padding-top: 22px;
-        padding-bottom: 26px;
-        width: 166px;
+        padding: 10px;
+        width: 130px;
 
     }
 
     #navimg {
         padding-top: 10.5px;
-        padding-bottom: 13px;
-        width: 150px;
+        padding-bottom: 12px;
+        width: 130px;
     }
 
     #muzakli {
@@ -581,7 +578,7 @@ input:checked~label:not(.steps) span:after {
         position: fixed;
         top: 0;
 
-        font-size: 16px;
+        font-size: 20px;
         text-decoration: none;
         background-color: #030A8C;
         display: block;
@@ -593,7 +590,7 @@ input:checked~label:not(.steps) span:after {
         padding-left: 0px;
         padding-right: 0px;
         padding-top: 20px;
-        padding-bottom: 21px;
+        padding-bottom: 16px;
         font-variant: small-caps;
         margin-left: 0px;
     }
@@ -615,8 +612,7 @@ input:checked~label:not(.steps) span:after {
     #smooth h1 {
         margin: 0;
         padding: 0;
-        padding-top: 10px;
-        padding-left: 35px;
+        padding-left: 45px;
     }
 
     #smooth p {
@@ -624,7 +620,7 @@ input:checked~label:not(.steps) span:after {
         margin: 0;
         padding: 0;
         padding-bottom: 20px;
-        padding-left: 35px;
+        padding-left: 45px;
         padding-right: 10px;
 
     }
@@ -632,6 +628,10 @@ input:checked~label:not(.steps) span:after {
     #trending {
         grid-area: trending;
         height: 480px;
+    }
+
+    #trending h2 {
+        padding-left: 45px;
     }
 
     #trending .more {
@@ -675,7 +675,7 @@ input:checked~label:not(.steps) span:after {
     #playlists h2,
     #curated h2 {
         background-color: white;
-        padding-left: 35px;
+        padding-left: 45px;
         padding-top: 30px;
         margin-top: 0px;
     }
