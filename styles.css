@@ -10,6 +10,8 @@ html {
 }
 
 /* START - This code specifies order of sections and styles sections */
+/* Flexbox fudamentals applied here to correctly order sections*/
+/* Mobile First fundamentals applied here since small screen is default */
 body {
     font-family: Optima, sans-serif;
     background-color: #030A8C;
@@ -19,43 +21,47 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 5%;
+    padding-top: 50px;
 }
 
 #navbar {
     width: 375px;
     height: 57px;
-    order: 1;
+    flex: 1;
     background-color: #030A8C;
     z-index: 1;
 }
 
 #smooth {
-    width: 355px;
+    width: 375px;
     height: 160px;
-    order: 2;
+    flex: 1;
     background-image: linear-gradient(to right, #2104D9, #000000);
-    padding: 10px;
+}
+
+#smooth h1,
+#smooth p {
+    padding-left: 35px;
 }
 
 #trending {
     width: 375px;
     height: 480px;
-    order: 3;
+    flex: 1;
     background-color: #FFFFFF;
 }
 
 #playlists {
     width: 375px;
     height: 480px;
-    order: 4;
+    flex: 1;
     background-color: #0D8DFB;
 }
 
 #curated {
     width: 375px;
     height: 480px;
-    order: 5;
+    flex: 1;
     background-color: #020873;
 }
 
@@ -75,30 +81,40 @@ body {
     text-align: center;
 }
 
-#trending h2 {
+#trending h2{
+    padding-top: 25px;
+    padding-left: 35px;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#playlists h2,
+#curated h2 {
+    padding: 0;
+    margin: 0;
     padding-left: 35px;
 }
 
 #playlists h2,
 #curated h2 {
     background-color: white;
-    padding: 20px;
     padding-top: 30px;
     margin-top: 0px;
-    padding-left: 35px;
 }
 
 
 .buttonbackground {
     background: white;
     width: 375px;
-    padding-top: 10px;
+    padding-top: 5px;
     padding-bottom: 10px;
+    margin-bottom: 0;
 }
 
 footer {
     width: 375px;
-    order: 6;
+    flex: 1;
     padding-top: 10px;
     text-align: center;
 }
@@ -287,6 +303,8 @@ footer {
     font-weight: 700;
     font-style: normal;
     color: #590242;
+    background-color: white;
+    padding-bottom: 10px;
 }
 
 dd {
@@ -399,10 +417,6 @@ nav li {
     list-style: none;
 }
 
-nav li:first-child {
-    display: inline;
-}
-
 nav a {
     text-decoration: none;
     background-color: #030A8C;
@@ -418,7 +432,7 @@ nav a {
 ul {
     position: absolute;
     top: 0;
-    margin-left: 50px;
+    margin-left:50px;
     z-index: 1;
 }
 
@@ -429,16 +443,131 @@ nav a:hover {
 
 
 
-
+/* Media Queriers fundamentals applied here to target larger screen */
+/* Grid fundamentals applied here to displat body sections and nav */
 @media screen and (min-width:834px) {
+
+    body,
+    #navbar,
+    #smooth,
+    #trending,
+    footer {
+        width: 834px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    body{
+        display: grid;
+        grid-template-columns: 417px 417px;
+        grid-template-areas: 
+        "nav nav"
+        "smootharea smootharea"
+        "trending trending"
+        "play curated"
+        "footer footer"
+         ;
+    }
+
+    #navbar {
+        grid-area: nav;
+        padding-left: 0;
+        margin-left: 0;
+        position: fixed;
+        top: 0;
+    }
+
     ul {
         overflow: visible;
-        position: absolute;
-        top: 0;
+        margin-left: 0;
         width: auto;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
+
+    #smooth{
+        grid-area: smootharea;
+    }
+
+    #trending{
+        grid-area: trending;
+        height: 480px;
+    }
+
+    #playlists{
+        width: 417px;
+        height: 600px;
+        grid-area: play;
+    }
+
+    #curated{
+        width: 417px;
+        height: 600px;
+        grid-area: curated;
+    }
+
+    #playlists h2,
+    #curated h2 {
+        background-color: white;
+        padding-left: 35px;
+        padding-top: 30px;
+        margin-top: 0px;
+    }
+
+    .buttonbackground{
+        width: 417px;
+        margin-top: 20px;
+    }
+
+    .verticalscroll {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    
+    footer{
+        grid-area: footer;
+        margin-top: 80px;
+    }
+
+   .playlistcontainer, .curatedcontainer {
+        width: 360px;
+        height: 140px;
+        padding: 10px;
+        margin: 10px;
+        flex: 1;
+        grid-area: container;
+        display: grid;
+        grid-template-areas: 
+        "img h3 ."
+        "img p ."
+        ;
+    }
+
+        
+    .playlistcontainer img, .curatedcontainer img {
+        width: 180px;
+        grid-area: img;
+        padding: 0;
+        margin: 0;
+    }
+
+    .playlistcontainer h3, .curatedcontainer h3 {
+        grid-area: h3;
+        padding: 0;
+        margin: 0;
+    }
+
+    .playlistcontainer p, .curatedcontainer p{
+        grid-area: p;
+        padding: 0;
+        margin: 0;
+    }
+
 
     label span,
     input {
