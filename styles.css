@@ -84,7 +84,8 @@ body {
     text-align: center;
 }
 
-.playlistcontainer:hover, .curatedcontainer:hover {
+.playlistcontainer:hover,
+.curatedcontainer:hover {
     background-color: #590242;
 }
 
@@ -475,9 +476,9 @@ nav a:hover {
         ;
     }
 
-    nav{
+    nav {
         grid-area: nav;
-        padding:0;
+        padding: 0;
         margin: 0;
         position: fixed;
         top: 0;
@@ -495,12 +496,14 @@ nav a:hover {
         height: 100px;
         grid-area: smootharea;
     }
+
     #smooth h1 {
         margin: 0;
         padding: 0;
         padding-top: 10px;
         padding-left: 35px;
     }
+
     #smooth p {
         font-size: 14px;
         margin: 0;
@@ -516,7 +519,7 @@ nav a:hover {
         height: 480px;
     }
 
-    #trending .more{
+    #trending .more {
         margin-left: 650px;
     }
 
