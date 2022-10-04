@@ -563,6 +563,7 @@ input:checked~label:not(.steps) span:after {
         position: fixed;
         top: 0;
         padding: 10px;
+        padding-bottom: 11.8px;
         width: 130px;
 
     }
